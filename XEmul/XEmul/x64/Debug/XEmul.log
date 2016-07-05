@@ -1,5 +1,5 @@
 ﻿  Source.c
-d:\virtual machine\xemul\xemul\xemul\source.c(6): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
-  d:\virtual machine\xemul\xemul\xemul\source.c(6): note: consider using '%zd' in the format string
-  XEmul.vcxproj -> D:\Virtual machine\xemul\XEmul\x64\Debug\XEmul.exe
-  XEmul.vcxproj -> D:\Virtual machine\xemul\XEmul\x64\Debug\XEmul.pdb (Partial PDB)
+d:\mario\xemul\xemul\xemul\source.c(6): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+  d:\mario\xemul\xemul\xemul\source.c(6): note: consider using '%zd' in the format string
+  XEmul.vcxproj -> D:\Mario\xemul\XEmul\x64\Debug\XEmul.exe
+  XEmul.vcxproj -> D:\Mario\xemul\XEmul\x64\Debug\XEmul.pdb (Partial PDB)
