@@ -355,6 +355,8 @@ paket-files/
 .idea/
 *.sln.iml
 
+####################
 .gitignore
 docs/
 tmp/
+/src/custom.h
