@@ -21,6 +21,7 @@ void printallsz()
     printsz("flt64_t", sizeof(flt64_t));
     printsz("flt80_t", sizeof(flt80_t));
     printsz("flt128_t", sizeof(flt128_t));
+    printsz("regs_t", sizeof(regs_t));
 }
 
 int main()

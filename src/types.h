@@ -164,7 +164,7 @@ typedef struct regs_t
     // available register files
     intregs_t rint;
     mmxregs_t rmmx;
-    sseregs_t sse;
+    sseregs_t rsse;
 
     // register aliases
     i8lregs_t ri8l;
@@ -173,7 +173,5 @@ typedef struct regs_t
     i32regs_t ri32;
 
 } regs_t;
-
-regs_t regs;
 
 #endif //XEMUL_TYPES_H
