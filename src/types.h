@@ -136,22 +136,14 @@ typedef struct i8lregs_t
 
 typedef struct i8hregs_t
 {
-    int8_t *const al;
-    int8_t *const cl;
-    int8_t *const dl;
-    int8_t *const bl;
-    int8_t *const sil;
-    int8_t *const dil;
-    int8_t *const spl;
-    int8_t *const bpl;
-    int8_t *const r8b;
-    int8_t *const r9b;
-    int8_t *const r10b;
-    int8_t *const r11b;
-    int8_t *const r12b;
-    int8_t *const r13b;
-    int8_t *const r14b;
-    int8_t *const r15b;
+    int8_t *const ah;
+    int8_t *const ch;
+    int8_t *const dh;
+    int8_t *const bh;
+    int8_t *const sih;
+    int8_t *const dih;
+    int8_t *const sph;
+    int8_t *const bph;
 } i8hregs_t;
 
 typedef struct regs_t
