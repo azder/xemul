@@ -357,6 +357,5 @@ paket-files/
 
 ####################
 .gitignore
-docs/
 tmp/
 /src/custom.h
