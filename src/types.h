@@ -22,6 +22,11 @@ typedef __float128 flt128_t;
 #pragma clang diagnostic pop
 #endif
 
+typedef int8_t *pint8_t;
+typedef int16_t *pint16_t;
+typedef int32_t *pint32_t;
+typedef int64_t *pint64_t;
+
 typedef struct intregs_t
 {
     int64_t rax;
@@ -40,7 +45,7 @@ typedef struct intregs_t
     int64_t r13;
     int64_t r14;
     int64_t r15;
-} intregs_t;
+} intregs_t, *pintregs_t;
 
 typedef struct mmxregs_t
 {
@@ -52,7 +57,7 @@ typedef struct mmxregs_t
     flt64_t mmx5;
     flt64_t mmx6;
     flt64_t mmx7;
-} mmxregs_t;
+} mmxregs_t, *pmmxregs_t;
 
 typedef struct sseregs_t
 {
@@ -72,79 +77,79 @@ typedef struct sseregs_t
     flt128_t xmm13;
     flt128_t xmm14;
     flt128_t xmm15;
-} sseregs_t;
+} sseregs_t, *psseregs_t;
 
 typedef struct i32regs_t
 {
-    int32_t *const eax;
-    int32_t *const ecx;
-    int32_t *const edx;
-    int32_t *const ebx;
-    int32_t *const esi;
-    int32_t *const edi;
-    int32_t *const esp;
-    int32_t *const ebp;
-    int32_t *const r8d;
-    int32_t *const r9d;
-    int32_t *const r10d;
-    int32_t *const r11d;
-    int32_t *const r12d;
-    int32_t *const r13d;
-    int32_t *const r14d;
-    int32_t *const r15d;
-} i32regs_t;
+    pint32_t eax;
+    pint32_t ecx;
+    pint32_t edx;
+    pint32_t ebx;
+    pint32_t esi;
+    pint32_t edi;
+    pint32_t esp;
+    pint32_t ebp;
+    pint32_t r8d;
+    pint32_t r9d;
+    pint32_t r10d;
+    pint32_t r11d;
+    pint32_t r12d;
+    pint32_t r13d;
+    pint32_t r14d;
+    pint32_t r15d;
+} i32regs_t, *pi32regs_t;
 
 typedef struct i16regs_t
 {
-    int16_t *const ax;
-    int16_t *const cx;
-    int16_t *const dx;
-    int16_t *const bx;
-    int16_t *const si;
-    int16_t *const di;
-    int16_t *const sp;
-    int16_t *const bp;
-    int16_t *const r8w;
-    int16_t *const r9w;
-    int16_t *const r10w;
-    int16_t *const r11w;
-    int16_t *const r12w;
-    int16_t *const r13w;
-    int16_t *const r14w;
-    int16_t *const r15w;
-} i16regs_t;
+    pint16_t ax;
+    pint16_t cx;
+    pint16_t dx;
+    pint16_t bx;
+    pint16_t si;
+    pint16_t di;
+    pint16_t sp;
+    pint16_t bp;
+    pint16_t r8w;
+    pint16_t r9w;
+    pint16_t r10w;
+    pint16_t r11w;
+    pint16_t r12w;
+    pint16_t r13w;
+    pint16_t r14w;
+    pint16_t r15w;
+} i16regs_t, *pi16regs_t;
 
 typedef struct i8lregs_t
 {
-    int8_t *const al;
-    int8_t *const cl;
-    int8_t *const dl;
-    int8_t *const bl;
-    int8_t *const sil;
-    int8_t *const dil;
-    int8_t *const spl;
-    int8_t *const bpl;
-    int8_t *const r8b;
-    int8_t *const r9b;
-    int8_t *const r10b;
-    int8_t *const r11b;
-    int8_t *const r12b;
-    int8_t *const r13b;
-    int8_t *const r14b;
-    int8_t *const r15b;
-} i8lregs_t;
+    pint8_t al;
+    pint8_t cl;
+    pint8_t dl;
+    pint8_t bl;
+    pint8_t sil;
+    pint8_t dil;
+    pint8_t spl;
+    pint8_t bpl;
+    pint8_t r8b;
+    pint8_t r9b;
+    pint8_t r10b;
+    pint8_t r11b;
+    pint8_t r12b;
+    pint8_t r13b;
+    pint8_t r14b;
+    pint8_t r15b;
+} i8lregs_t, *pi8lregs_t;
 
 typedef struct i8hregs_t
 {
-    int8_t *const ah;
-    int8_t *const ch;
-    int8_t *const dh;
-    int8_t *const bh;
-    int8_t *const sih;
-    int8_t *const dih;
-    int8_t *const sph;
-    int8_t *const bph;
-} i8hregs_t;
+    pint8_t ah;
+    pint8_t ch;
+    pint8_t dh;
+    pint8_t bh;
+    pint8_t sih;
+    pint8_t dih;
+    pint8_t sph;
+    pint8_t bph;
+} i8hregs_t, *pi8hregs_t;
 
 typedef struct regs_t
 {
@@ -164,6 +169,6 @@ typedef struct regs_t
     i16regs_t ri16;
     i32regs_t ri32;
 
-} regs_t;
+} regs_t, *pregs_t;
 
 #endif //XEMUL_TYPES_H

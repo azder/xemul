@@ -3,7 +3,7 @@
 
 #include "custom.h"
 
-#include "types.h"
+#include "regs.h"
 
 
 void printsz(char *type, size_t size)
@@ -24,8 +24,32 @@ void printallsz()
     printsz("regs_t", sizeof(regs_t));
 }
 
+void printregs(pregs_t pregs)
+{
+    *pregs->ri8l.al = 1;
+    *pregs->ri8h.ch = 2;
+    *pregs->ri16.dx = 4;
+    *pregs->ri32.ebx = 16;
+
+    pintregs_t ri = &pregs->rint;
+
+    printf("rax: 0x%08" PRIx64 "\n", ri->rax);
+    printf("rcx: 0x%08" PRIx64 "\n", ri->rcx);
+    printf("rdx: 0x%08" PRIx64 "\n", ri->rdx);
+    printf("rbx: 0x%08" PRIx64 "\n", ri->rbx);
+}
+
 int main()
 {
+
+    regs_t regs;
+    pregs_t pregs = &regs;
+
+    regs_init(pregs);
+
+    printregs(pregs);
     printallsz();
+
     return 0;
+
 }
