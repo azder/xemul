@@ -102,9 +102,3 @@ typedef struct register_file
 } register_file;
 
 register_file   registers;
-
-void initalize_registers ( register_file const *pfile )
-{
-    // TODO: initalize all registers
-    //*(pfile->int_32_registers.pEAX) = 1;
-};

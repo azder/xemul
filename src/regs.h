@@ -9,4 +9,6 @@
 
 regs_t *regs_init(pregs_t pregs);
 
+regs_t registers;
+
 #endif //XEMUL_REGS_H
