@@ -26,6 +26,10 @@ typedef int8_t *pint8_t;
 typedef int16_t *pint16_t;
 typedef int32_t *pint32_t;
 typedef int64_t *pint64_t;
+typedef flt32_t *pflt32_t;
+typedef flt64_t *pflt64_t;
+typedef flt80_t *pflt80_t;
+typedef flt128_t *pflt128_t;
 
 typedef struct intregs_t
 {

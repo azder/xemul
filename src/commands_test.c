@@ -7,17 +7,14 @@ int main()
 {
     regs_init(&registers);
 
-    int64_t number = 42;
-    MOV(&number, &registers.rint.rax, sizeof(number));
-    printf("%i \n", registers.rint.rax);
-    INC(&number);
+    int64_t number = 41;
+    mov(&number, &registers.rint.rax, sizeof(number));
+    inc_int64(&registers.rint.rax);
     printf("%i \n", registers.rint.rax);
 
-    int32_t number2 = 24;
-    MOV(&number2, &registers.ri32.eax, sizeof(number2));
-    printf("%i \n", registers.ri32.eax);
-    INC(&number);
-    printf("%i \n", registers.ri32.eax);
+    flt64_t fltnumber = 20.39;
+    inc_flt64(&fltnumber);
+    printf("%f \n", fltnumber);
 
     return 0;
 

@@ -3,9 +3,9 @@
 
 // Begin of data movement commands
 
-int MOV(void* source, void* destination, uint8_t size)
+void mov(void* source, void* destination, uint16_t size)
 {
-    uint8_t currentByte;
+    uint16_t currentByte;
     int8_t* sourcePointer = (int8_t*)source;
     int8_t* desinationPointer = (int8_t*)destination;
 
@@ -16,16 +16,45 @@ int MOV(void* source, void* destination, uint8_t size)
     return 0;
 }
 
-int PUSH(void* source)
+int push(void* source)
 {
     // TODO
 }
 
-int POP(void* destination)
+int pop(void* destination)
 {
     // TODO
 }
 
 // End of data movement commands
+
+// Begin of arithmetic commands
+
+void inc_int8(pint8_t destination) {
+    (*destination)++;
+}
+void inc_int16(pint16_t destination) {
+    (*destination)++;
+}
+void inc_int32(pint32_t destination) {
+    (*destination)++;
+}
+void inc_int64(pint64_t destination) {
+    (*destination)++;
+}
+void inc_flt32(pflt32_t destination) {
+    (*destination)++;
+}
+void inc_flt64(pflt64_t destination) {
+    (*destination)++;
+}
+void inc_flt80(pflt80_t destination) {
+    (*destination)++;
+}
+void inc_flt128(pflt128_t destination) {
+    (*destination)++;
+}
+
+// End of arithmetic commands
 
 #endif //XEMUL_COMMANDS
