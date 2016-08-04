@@ -12,8 +12,6 @@ void mov(void* source, void* destination, uint16_t size)
     for(currentByte = 0; currentByte < size; currentByte++) {
         *desinationPointer++ = *sourcePointer++;
     }
-
-    return 0;
 }
 
 int push(void* source)
@@ -30,31 +28,104 @@ int pop(void* destination)
 
 // Begin of arithmetic commands
 
-void inc_int8(pint8_t destination) {
+void inc_int8(pint8_t destination)
+{
     (*destination)++;
 }
-void inc_int16(pint16_t destination) {
+void inc_int16(pint16_t destination)
+{
     (*destination)++;
 }
-void inc_int32(pint32_t destination) {
+void inc_int32(pint32_t destination)
+{
     (*destination)++;
 }
-void inc_int64(pint64_t destination) {
+void inc_int64(pint64_t destination)
+{
     (*destination)++;
 }
-void inc_flt32(pflt32_t destination) {
+void inc_flt32(pflt32_t destination)
+{
     (*destination)++;
 }
-void inc_flt64(pflt64_t destination) {
+void inc_flt64(pflt64_t destination)
+{
     (*destination)++;
 }
-void inc_flt80(pflt80_t destination) {
+void inc_flt80(pflt80_t destination)
+{
     (*destination)++;
 }
-void inc_flt128(pflt128_t destination) {
+void inc_flt128(pflt128_t destination)
+{
     (*destination)++;
 }
 
+void dec_int8(pint8_t destination)
+{
+    (*destination)--;
+}
+void dec_int16(pint16_t destination)
+{
+    (*destination)--;
+}
+void dec_int32(pint32_t destination)
+{
+    (*destination)--;
+}
+void dec_int64(pint64_t destination)
+{
+    (*destination)--;
+}
+void dec_flt32(pflt32_t destination)
+{
+    (*destination)--;
+}
+void dec_flt64(pflt64_t destination)
+{
+    (*destination)--;
+}
+void dec_flt80(pflt80_t destination)
+{
+    (*destination)--;
+}
+void dec_flt128(pflt128_t destination)
+{
+    (*destination)--;
+}
+
+int8_t add_int8(pint8_t source, pint8_t destination)
+{
+    return *(destination) + *(source);
+}
+int16_t add_int16(pint16_t source, pint16_t destination)
+{
+    return *(destination) + *(source);
+}
+int32_t add_int32(pint32_t source, pint32_t destination)
+{
+    return *(destination) + *(source);
+}
+int64_t add_int64(pint64_t source, pint64_t destination)
+{
+    return *(destination) + *(source);
+}
+flt32_t add_flt32(pflt32_t source, pflt32_t destination)
+{
+    return *(destination) + *(source);
+}
+flt64_t add_flt64(pflt64_t source, pflt64_t destination)
+{
+    return *(destination) + *(source);
+}
+flt80_t add_flt80(pflt80_t source, pflt80_t destination)
+{
+    return *(destination) + *(source);
+}
+flt128_t add_flt128(pflt128_t source, pflt128_t destination)
+{
+    return *(destination) + *(source);
+}
 // End of arithmetic commands
 
 #endif //XEMUL_COMMANDS
