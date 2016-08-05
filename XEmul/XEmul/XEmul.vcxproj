@@ -110,10 +110,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Source\registers.h" />
+    <ClCompile Include="..\..\src\main.c" />
+    <ClCompile Include="..\..\src\regs.c" />
+    <ClCompile Include="Source.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.c" />
+    <ClInclude Include="..\..\src\custom.h" />
+    <ClInclude Include="..\..\src\regs.h" />
+    <ClInclude Include="..\..\src\types.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

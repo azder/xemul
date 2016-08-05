@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.3.2)
 project(xemul C)
 
 set(SOURCE_FILES src/main.c src/custom.h src/types.h src/regs.c src/regs.h)

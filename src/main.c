@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdint.h>
-
 #include "custom.h"
 
 #include "regs.h"
@@ -26,10 +25,10 @@ void printallsz()
 
 void printregs(pregs_t pregs)
 {
-    *pregs->ri8l.al = 1;
-    *pregs->ri8h.ch = 2;
-    *pregs->ri16.dx = 4;
-    *pregs->ri32.ebx = 16;
+    // *pregs->ri8l.al = 1;
+    // *pregs->ri8h.ch = 2;
+    // *pregs->ri16.dx = 4;
+    // *pregs->ri32.ebx = 16;
 
     pintregs_t ri = &pregs->rint;
 
@@ -37,6 +36,7 @@ void printregs(pregs_t pregs)
     printf("rcx: 0x%08" PRIx64 "\n", ri->rcx);
     printf("rdx: 0x%08" PRIx64 "\n", ri->rdx);
     printf("rbx: 0x%08" PRIx64 "\n", ri->rbx);
+
 }
 
 int main()
@@ -49,7 +49,7 @@ int main()
 
     printregs(pregs);
     printallsz();
-
-    return 0;
-
+    
+    printf("%s", "Hristos voskrese! Vistina voskrese!" );
+    return 12;
 }

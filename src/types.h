@@ -160,7 +160,7 @@ typedef struct regs_t
 
     // specific registers
     int64_t rip;
-    int64_t reflags;
+    int64_t rflags;
 
     // available register files
     intregs_t rint;
