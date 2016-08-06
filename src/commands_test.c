@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 #include "regs.c"
 #include "commands.c"
@@ -7,18 +8,15 @@ int main()
 {
     regs_init(&registers);
 
-    int64_t number = 41;
-    mov(&number, &registers.rint.rax, sizeof(number));
-    inc_int64(&registers.rint.rax);
-    printf("%li \n", registers.rint.rax);
+    uint8_t a = 30, b = 40;
 
-    flt64_t fltnumber = 20.39;
-    dec_flt64(&fltnumber);
-    printf("%f \n", fltnumber);
+    printf("%i + %i = %i \n", a, b, add_int8(&a, &b));
+    printf("RFLAGS: %li \n", registers.rflags);
 
-    int64_t add1 = 20, add2 = 22;
-    printf("%li", add_int64(&add1, &add2));
+    uint8_t c = 200, d = 100;
+
+    printf("%i + %i = %i \n", c, d, add_int8(&c, &d));
+    printf("RFLAGS: %li \n", registers.rflags); // overflow should occur
 
     return 0;
-
 }
