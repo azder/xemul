@@ -45,8 +45,8 @@ int8_t add_int8(pint8_t src, pint8_t dest)
     int8_t res_val;
 
     bool overflow = !__builtin_add_overflow(src_val, dest_val, &res_val);
-    set_rflags_arth(false, false, false, result, overflow);
-    
+    set_rflags_arth(false, false, false, res_val, overflow);
+
     return res_val;
 }
 // End of arithmetic commands
