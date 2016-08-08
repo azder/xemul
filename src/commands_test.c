@@ -8,12 +8,12 @@ int main()
 {
     regs_init(&registers);
 
-    uint8_t a = 30, b = 40;
+    int8_t a = 30, b = 30;
 
     printf("%i + %i = %i \n", a, b, add_int8(&a, &b));
     printf("RFLAGS: %li \n", registers.rflags);
 
-    uint8_t c = 200, d = 100;
+    int8_t c = -30, d = 20;
 
     printf("%i + %i = %i \n", c, d, add_int8(&c, &d));
     printf("RFLAGS: %li \n", registers.rflags); // overflow should occur

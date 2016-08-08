@@ -101,7 +101,7 @@ regs_t *regs_init(regs_t *pregs)
 
     /* The RFLAGS register should be also initialized. */
     pregs->rflags                                       = 0B0100000000000000000001000000000000000000000000000000000000000000;
-    
+
     pregs->rip                                          = 0;
 
     memset ( &pregs->rint, 0, sizeof ( pregs->rint ) );
@@ -109,4 +109,13 @@ regs_t *regs_init(regs_t *pregs)
     memset ( &pregs->rsse, 0, sizeof ( pregs->rsse ) );
 
     return pregs;
+}
+
+void set_rflags_arth(bool carry, bool parity, bool adjust, int result, bool overflow) {
+    // TODO: carry
+    // TODO: parity
+    // TODO: adjust
+    MODIFY_BIT(registers.rflags, __RFLAGS_ZF__, result == 0);
+    MODIFY_BIT(registers.rflags, __RFLAGS_SF__, result < 0 );
+    MODIFY_BIT(registers.rflags, __RFLAGS_OF__, overflow);
 }

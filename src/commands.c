@@ -40,12 +40,12 @@ void dec_int8(pint8_t destination)
 
 int8_t add_int8(pint8_t src, pint8_t dest)
 {
-    uint8_t src_val = *((uint8_t *) src);
-    uint8_t dest_val = *((uint8_t *) dest);
-    uint8_t res_val;
+    int8_t src_val = *src;
+    int8_t dest_val = *dest;
+    int8_t res_val;
 
     bool overflow = !__builtin_add_overflow(src_val, dest_val, &res_val);
-    MODIFY_BIT(registers.rflags, __RFLAGS_OF__, overflow);
+    set_rflags_arth(false, false, false, result, overflow);
     
     return res_val;
 }
